@@ -62,4 +62,15 @@ func TestRoundingDistance(t *testing.T) {
 			t.Errorf("expected %f, got %f", want, got)
 		}
 	})
+
+	t.Run("should round up distance from 0.6km to 1.0km", func(t *testing.T) {
+		distance := 0.6
+
+		got := roundUpDistance(distance)
+
+		want := 1.0
+		if got != want {
+			t.Errorf("expected %f, got %f", want, got)
+		}
+	})
 }
