@@ -11,5 +11,5 @@ func roundUpDistance(km float64) float64 {
 }
 
 func roundUpWaitingTime(seconds int) float64 {
-	return 1
+	return math.Ceil(float64(seconds) / 60)
 }
