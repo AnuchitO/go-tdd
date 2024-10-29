@@ -98,4 +98,15 @@ func TestRoundingWaitingTime(t *testing.T) {
 			t.Errorf("expected %f, got %f", want, got)
 		}
 	})
+
+	t.Run("should keep waiting to be 1m", func(t *testing.T) {
+		waitingTime := 60
+
+		got := roundUpWaitingTime(waitingTime)
+
+		want := 1.0
+		if got != want {
+			t.Errorf("expected %f, got %f", want, got)
+		}
+	})
 }
