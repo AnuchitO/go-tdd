@@ -218,3 +218,17 @@ func TestMinimumFare(t *testing.T) {
 		}
 	})
 }
+
+func TestRide(t *testing.T) {
+	t.Run("should return minimum fare as 35 THB when the fare less than 35 THB", func(t *testing.T) {
+		distance := 7.9
+		waitingTime := 179
+
+		got := Ride(distance, waitingTime)
+
+		want := 35.0
+		if got != want {
+			t.Errorf("expected %f, got %f", want, got)
+		}
+	})
+}
