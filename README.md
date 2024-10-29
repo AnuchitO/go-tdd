@@ -21,12 +21,12 @@ Learing Test-Driven Development with Go programming language
 
 ```
 Invoice:
-	Ride Fare: ฿70.00 for Distance: 15.0 km, Waiting Time: 10 minutes
-	Ride Fare: ฿35.00 for Distance: 7.0 km, Waiting Time: 5 minutes
-	Ride Fare: ฿40.00 for Distance: 8.2 km, Waiting Time: 6 minutes
+    Ride Fare: ฿51.00 for Distance: 12.0 km, Waiting Time: 3 minutes
+    Ride Fare: ฿35.00 for Distance: 7.5 km, Waiting Time: 3 minutes
+    Ride Fare: ฿37.00 for Distance: 8.5 km, Waiting Time: 3 minutes
 Total Number of Rides: 3
-Total Fare: ฿105.00
-Average Fare Per Ride: ฿35.00
+Total Fare: ฿123.00
+Average Fare Per Ride: ฿41.00
 ```
 
 ## ความต้องการของระบบคิดค่าโดยสารรถตุ๊กตุ๊ก
@@ -44,10 +44,10 @@ Average Fare Per Ride: ฿35.00
 - ระบบจะต้องสร้างใบแจ้งหนี้ที่มีรายละเอียดอย่างละเอียด ซึ่งรวมถึง:
 ```
 Invoice:
-	Ride Fare: ฿70.00 for Distance: 15.0 km, Waiting Time: 10 minutes
-	Ride Fare: ฿35.00 for Distance: 7.0 km, Waiting Time: 5 minutes
-	Ride Fare: ฿40.00 for Distance: 8.2 km, Waiting Time: 6 minutes
+    Ride Fare: ฿51.00 for Distance: 12.0 km, Waiting Time: 3 minutes
+    Ride Fare: ฿35.00 for Distance: 7.5 km, Waiting Time: 3 minutes
+    Ride Fare: ฿37.00 for Distance: 8.5 km, Waiting Time: 3 minutes
 Total Number of Rides: 3
-Total Fare: ฿105.00
-Average Fare Per Ride: ฿35.00
+Total Fare: ฿123.00
+Average Fare Per Ride: ฿41.00
 ```
