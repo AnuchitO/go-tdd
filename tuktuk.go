@@ -15,5 +15,5 @@ func roundUpWaitingTime(seconds int) float64 {
 }
 
 func Fare(km float64, seconds int) float64 {
-	return 6
+	return calculateFare(roundUpDistance(km), 0)
 }
