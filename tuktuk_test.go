@@ -244,3 +244,20 @@ func TestRide(t *testing.T) {
 		}
 	})
 }
+
+func TestMultipleRides(t *testing.T) {
+	t.Run("should return fare of 10km with 3m (180 seconds) waiting time", func(t *testing.T) {
+		rds := []ride{
+			{distance: 7.9, waitingTime: 120},  // 8.0km, 2.0m  = 35
+			{distance: 9.5, waitingTime: 180},  // 9.5km, 3.0m = 41
+			{distance: 10.0, waitingTime: 299}, // 10.0km, 5.0m = 45
+		}
+
+		total := TotalFare(rds)
+
+		want := 121.0
+		if total != want {
+			t.Errorf("expected %f, got %f", want, total)
+		}
+	})
+}

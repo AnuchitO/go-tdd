@@ -25,3 +25,16 @@ func Minimum(fare float64) float64 {
 func Ride(distance float64, waitingTime int) float64 {
 	return Minimum(Fare(distance, waitingTime))
 }
+
+type ride struct {
+	distance    float64
+	waitingTime int
+}
+
+func TotalFare(rides []ride) float64 {
+	var total float64
+	for _, ride := range rides {
+		total += Ride(ride.distance, ride.waitingTime)
+	}
+	return total
+}
