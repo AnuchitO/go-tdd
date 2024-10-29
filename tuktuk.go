@@ -19,5 +19,5 @@ func Fare(km float64, seconds int) float64 {
 }
 
 func Minimum(fare float64) float64 {
-	return 35
+	return math.Max(35, fare)
 }
