@@ -38,3 +38,18 @@ func TotalFare(rides []ride) float64 {
 	}
 	return total
 }
+
+type invoice struct {
+	Rides              []ride
+	Total              float64
+	AverageFarePerRide float64
+}
+
+func InvoiceDetails(rides []ride) invoice {
+	fare := TotalFare(rides)
+	return invoice{
+		Rides:              rides,
+		Total:              fare,
+		AverageFarePerRide: fare / float64(len(rides)),
+	}
+}

@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestCalculateFare(t *testing.T) {
 	t.Run("should return fare of 1 km without waiting time", func(t *testing.T) {
@@ -258,6 +261,27 @@ func TestMultipleRides(t *testing.T) {
 		want := 121.0
 		if total != want {
 			t.Errorf("expected %f, got %f", want, total)
+		}
+	})
+}
+
+func TestInvoiceDetails(t *testing.T) {
+	t.Run("invoice details for 3 rides", func(t *testing.T) {
+		rds := []ride{
+			{distance: 12.0, waitingTime: 180}, // 4*12.0km + 3.0m = 51.0
+			{distance: 7.5, waitingTime: 180},  // 4*7.5km + 3.0m = 33.0 will be 35.0
+			{distance: 8.5, waitingTime: 180},  // 4*8.5km + 3.0m = 37.0
+		}
+		want := invoice{
+			Rides:              rds,
+			Total:              123.0,
+			AverageFarePerRide: 41.00,
+		}
+
+		got := InvoiceDetails(rds)
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("expected %v, got %v", want, got)
 		}
 	})
 }
