@@ -170,4 +170,16 @@ func TestFare(t *testing.T) {
 			t.Errorf("expected %f, got %f", want, got)
 		}
 	})
+
+	t.Run("should return fare of 7.6km with 8m (450 seconds) waiting time", func(t *testing.T) {
+		distance := 7.6
+		waitingTime := 450
+
+		got := Fare(distance, waitingTime)
+
+		want := 40.0
+		if got != want {
+			t.Errorf("expected %f, got %f", want, got)
+		}
+	})
 }
