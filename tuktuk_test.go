@@ -3,9 +3,13 @@ package main
 import "testing"
 
 func TestCalculateFareShouldReturnTotalOf1KmWithoutWaitingTime(t *testing.T) {
-	f := calculateFare(1, 0)
+	distance := 1.0
+	waitingTime := 0.0
 
-	if f != 4.0 {
-		t.Errorf("expected 4, got %f", f)
+	got := calculateFare(distance, waitingTime)
+
+	want := 4.0
+	if got != want {
+		t.Errorf("expected %f, got %f", want, got)
 	}
 }
