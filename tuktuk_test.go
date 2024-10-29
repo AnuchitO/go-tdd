@@ -183,3 +183,16 @@ func TestFare(t *testing.T) {
 		}
 	})
 }
+
+func TestMinimumFare(t *testing.T) {
+	t.Run("should return minimum fare as 35 THB when the fare less than 35 THB", func(t *testing.T) {
+		fare := 34.0
+
+		got := Minimum(fare)
+
+		want := 35.0
+		if got != want {
+			t.Errorf("expected %f, got %f", want, got)
+		}
+	})
+}
