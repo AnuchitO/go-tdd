@@ -9,3 +9,7 @@ func calculateFare(km float64, minutes float64) float64 {
 func roundUpDistance(km float64) float64 {
 	return math.Ceil(km*2) / 2
 }
+
+func roundUpWaitingTime(seconds int) float64 {
+	return 1
+}
