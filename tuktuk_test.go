@@ -195,4 +195,15 @@ func TestMinimumFare(t *testing.T) {
 			t.Errorf("expected %f, got %f", want, got)
 		}
 	})
+
+	t.Run("should keep the fare as 35 THB when the fare is 35 THB", func(t *testing.T) {
+		fare := 35.0
+
+		got := Minimum(fare)
+
+		want := 35.0
+		if got != want {
+			t.Errorf("expected %f, got %f", want, got)
+		}
+	})
 }
