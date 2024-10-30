@@ -1,6 +1,7 @@
 # go-tdd
 Learing Test-Driven Development with Go programming language
-
+At ICT Mahidol x Arise: Test-Driven Development with Go
+Wed 30 Oct 2567 
 
 
 ## Requirements
